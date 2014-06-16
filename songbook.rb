@@ -82,8 +82,8 @@ protect "Admin" do
 	end
 
 	delete '/panel/:id' do
-		  n = Song.get params[:id]
-		  n.destroy
+		  s = Song.get params[:id]
+		  s.destroy
 		  redirect '/panel'
 	end
 end
