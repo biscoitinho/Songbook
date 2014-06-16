@@ -1,0 +1,10 @@
+<a href="/panel">login</a>
+<% @songs.each do |song| %>
+  <article>
+    <p>
+      <%=h song.title_post %>
+      <%=h song.content %>
+    </p>
+    <p class="meta">Created: <%= song.created_at %></p>
+  </article>
+<% end %>

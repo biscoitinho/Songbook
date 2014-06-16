@@ -1,0 +1,11 @@
+<% if @song %>
+  <form action="/panel/<%= @song.id %>" method="post" id="edit">
+    <input type="hidden" name="_method" value="put">
+    <textarea name="title_post"><%=h  @song.title_post %></textarea>
+    <textarea name="content"><%=h  @song.content %></textarea>
+    <input type="submit" value="Edit">
+  </form>
+  <p><a href="/panel/<%= @song.id %>/delete">Delete</a></p>
+<% else %>
+  <p>Post not found.</p>
+<% end %>

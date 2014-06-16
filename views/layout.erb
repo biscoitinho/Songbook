@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<link href="/rss.xml" rel="alternate" type="application/rss+xml">
+<head>
+  <meta charset="utf8">
+  <title><%= "#{@title} | #{SITE_TITLE}" %></title>
+  <link href="/reset.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <hgroup>
+      <h1><a href="/"><%= SITE_TITLE %></a></h1>
+      <h2><%= SITE_DESCRIPTION %></h2>
+    </hgroup>
+  </header>
+ 
+  <div id="main">
+    <%= yield %>
+  </div>
+ 
+  <footer>
+    <p><small>Coded at <a href="http://cookiedesign.pl">Cookiedesign.pl</a>.</small></p>
+  </footer>
+</body>
+</html>

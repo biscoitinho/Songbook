@@ -1,0 +1,18 @@
+<section id="add">
+  <form action="/panel" method="post">
+    <input name="title_post" placeholder="Title">
+    <textarea name="content" placeholder="Your post&hellip;"></textarea>
+    <input type="submit" value="Publish">
+  </form>
+</section>
+
+<% @songs.each do |song| %>
+  <article>
+    <p>
+      <%=h song.title_post %>
+      <%=h song.content %>
+      <span><a href="/panel/<%= song.id %>">[edit]</a></span>
+    </p>
+    <p class="meta">Created: <%= song.created_at %></p>
+  </article>
+<% end %>
