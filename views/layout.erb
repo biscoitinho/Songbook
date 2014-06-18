@@ -9,17 +9,16 @@
 <body>
   <header>
     <hgroup>
-      <h1><a href="/"><%= SITE_TITLE %></a></h1>
+      <h1><img src="/note.png"><a href="/"><%= SITE_TITLE %></a></h1>
       <h2><%= SITE_DESCRIPTION %></h2>
     </hgroup>
   </header>
- 
+
   <div id="main">
     <%= yield %>
   </div>
- 
-  <footer>
-    <p><small>Coded at <a href="http://cookiedesign.pl">Cookiedesign.pl</a>.</small></p>
+  <footer class="end">
+    <p><img src="/cookie.gif" alt="cookie" height="10" width="10"><small>oded at <a href="http://cookiedesign.pl">Cookiedesign.pl</a>.</small></p>
   </footer>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <% if @song %>
-  <p>Are you sure you want to delete post: <em>"<%=h  @song.content %>"</em>?</p>
+  <p>Are you sure you want to delete post: <em>"<%=h  @song.title_post %>"</em>?</p><br>
   <form action="/panel/<%= @song.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete post">
-    <a href="/panel/<%= @song.id %>">Cancel</a>
+    <input type="submit" class="delete-post" value="Delete post">
+    <a class="cancel" href="/panel/<%= @song.id %>">Cancel</a>
   </form>
 <% else %>
   <p>Post not found.</p>
